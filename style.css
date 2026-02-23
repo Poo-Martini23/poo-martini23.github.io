@@ -1,0 +1,72 @@
+@property --page-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: white;
+}
+
+:root {
+  --page-color: ;
+  animation: colorchange 1s cubic-bezier(0.87, 0, 0.13, 1) 0.8s 1 normal forwards;
+}
+body {
+  color: var(--page-color);
+  padding: 2px;
+  font-family: monospace;
+  background-color: var(--page-color);
+  font-size: 16px;
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .sidebar {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            /* Creates a 20px gap, then a 2px white line */
+            box-shadow: inset 0 0 0 9px black, 
+                        inset 0 0 0 10px var(--page-color);
+            border-right: 2px solid var(--page-color);
+        }
+
+        .main-content {
+            flex: 5;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            /* Creates a 20px gap, then a 2px white line */
+            box-shadow: inset 0 0 0 9px black, 
+                        inset 0 0 0 10px var(--page-color);
+          }
+.sidebartext {
+  margin: 20px;
+}
+
+/* animation stuffs */
+
+@keyframes colorchange {
+	0% {
+		--page-color: white;
+	}
+
+	100% {
+		--page-color: #fc2651;
+	}
+}
+
+.headertxt {
+  color: black;
+  text-align: center
+}
